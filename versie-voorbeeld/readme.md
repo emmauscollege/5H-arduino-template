@@ -2,6 +2,6 @@
 Er is voorbeeldcode voor de volgende projecten
 * auto
 * stoplicht
-* spel
+* spel\
 Gebruik van de voorbeeldcode voor je project is verplicht
 
