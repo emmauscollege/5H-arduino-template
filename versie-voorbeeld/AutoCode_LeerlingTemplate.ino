@@ -2,14 +2,14 @@
  * Auto Startcode                        *
  * met toestansdiagrammen                *
  * Emmauscollege                         *
- * v20201022GEE                          *
+ * v20201117GEE                          *
  *****************************************/
  
-// libaries die je gebruikt
+// libraries die je gebruikt
 #include <LiquidCrystal.h>
 
 /*****************************************
- * variabelen die je gebruikt maken      *
+ * variabelen die je gebruikt            *
  *****************************************/
 
 // initialize het display
@@ -37,12 +37,12 @@ String regelBoven = "";
 String regelOnder = "";
 
 // variabelen voor de toestanden maken
-// toestanden
+// toestanden:
 const int TEST = 1;
 const int STOP = 2;
 int toestand = TEST;
 unsigned long toestandStartTijd = 0;
-// subtoestanden van TEST
+// subtoestanden van TEST:
 const int RECHTSAF = 1;
 const int LINKSAF = 2;
 const int VOORUIT = 3;
@@ -51,7 +51,7 @@ int testToestand = RECHTSAF;
 unsigned long testToestandStartTijd = 0;
 
 /*****************************************
- * functies die je gebruikt maken        *
+ * functies die je gebruikt              *
  *****************************************/
 
 // functie om afstandssensor uit te lezen
@@ -78,7 +78,7 @@ long readDistance(int triggerPin, int echoPin)
 void testLoop() {
   // lees afstandssensoren uit
   // dit is nodig voor alle test toestanden
-  // omrekenen naar centimers = milliseconde / 29 / 2
+  // omrekenen naar centimeters = milliseconden / 29 / 2
   afstandR = readDistance(pinAfstandTrigR, pinAfstandEchoR) / 29 / 2; 
   afstandL = readDistance(pinAfstandTrigL, pinAfstandEchoL) / 29 / 2; 
   afstandM = readDistance(pinAfstandTrigM, pinAfstandEchoM) / 29 / 2; 
